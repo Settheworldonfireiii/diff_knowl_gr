@@ -27,10 +27,9 @@ class DLL:
     def insert(self,x):
        it = self.next
        while it:
-           it = self.next
-       self.prev = it.prev
-       self.node = x
-       self.next = None
+           it = it.next
+       it.node = x
+       it.next = None
 
 
     def search(self, x):
@@ -42,8 +41,25 @@ class DLL:
                    found = True
                    break
                i += 1
-               it = self.next
+               it = it.next
        return found, i
+
+
+    def traverse(self):
+        it = self.node
+        print(it)
+        while it:
+            it = it.next
+            print(it)
+
+
+    def traverse_reverse(self):
+        it = self.node
+        print(it)
+        while it.self != it.prev:
+            it = it.prev
+            print(it)
+
 
 
 
