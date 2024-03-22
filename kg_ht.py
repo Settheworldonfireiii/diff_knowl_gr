@@ -20,10 +20,11 @@ class DLL:
     def __init__(self, x):
         self.node = x
         self.next = None
-        self.prev =self.node
+        self.prev = self.node
 
 
-   def insert(self,x):
+
+    def insert(self,x):
        it = self.next
        while it:
            it = self.next
@@ -31,7 +32,8 @@ class DLL:
        self.node = x
        self.next = None
 
-   def search(self, x):
+
+    def search(self, x):
        it = self.node
        found = False
        i = 0
