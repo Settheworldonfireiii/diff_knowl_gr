@@ -62,6 +62,20 @@ class DLL:
 
 
 
+    #not memory safe, it does not delete, just switches off the chain
+    def delete(self, x):
+        it = self.node
+        i = 0
+        while it:
+            if it == x:
+                it.prev.next = it.next
+                t = it.prev.prev
+                it.node = it.prev
+                it.prev = t
+                break
+
+
+
 
 
 class HashTable:
